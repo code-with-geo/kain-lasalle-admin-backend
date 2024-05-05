@@ -31,7 +31,7 @@ export const addVendor = async (req, res) => {
 			token: jwt.sign({ id: vendor._id }, process.env.SECRET_KEY),
 		}).save();
 
-		const emailURL = `${process.env.CLIENT_URL}/${vendor._id}/verify/${token.token}`;
+		const emailURL = `https://kain-lasale-store-dev.vercel.app/${vendor._id}/verify/${token.token}`;
 		await EmailSender(
 			vendor.email,
 			"Email Verification",
