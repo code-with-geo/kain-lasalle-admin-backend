@@ -8,6 +8,7 @@ import { AdminsRouter } from "./src/routes/Admin.js";
 import { StoreRouter } from "./src/routes/Stores.js";
 import { ProductRouter } from "./src/routes/Products.js";
 import { VendorsRouter } from "./src/routes/Vendors.js";
+import { OrdersRoute } from "./src/routes/Orders.js";
 
 app.use(
 	cors({
@@ -22,6 +23,7 @@ app.use("/admins", AdminsRouter);
 app.use("/stores", StoreRouter);
 app.use("/products", ProductRouter);
 app.use("/vendors", VendorsRouter);
+app.use("/orders", OrdersRoute);
 
 mongoose.connect(process.env.CONNECTION_STRING);
 
