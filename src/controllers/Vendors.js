@@ -179,7 +179,7 @@ export const deleteVendor = async (req, res) => {
 
 		return res.json({
 			responsecode: "200",
-			message: "Product is successfully deleted.",
+			message: "Vendor is successfully deleted.",
 		});
 	} catch (err) {
 		console.log(err);
