@@ -1,6 +1,7 @@
 import express from "express";
 import {
 	addVendor,
+	deleteVendor,
 	getAllVendor,
 	getVendorByID,
 	updateVendor,
@@ -14,5 +15,6 @@ router.get("/get-by-id/:vendorID", getVendorByID);
 router.post("/edit/:vendorID", updateVendor);
 router.get("/:storeID", getAllVendor);
 router.get("/:id/verify/:token", verifyEmail);
+router.post("/delete", deleteVendor);
 
 export { router as VendorsRouter };
